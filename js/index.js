@@ -27,3 +27,48 @@ funBus.addEventListener('dblclick', () => {
 	funBus.src = "img/fun-bus-rev.jpg";
 })
 
+// On Click, changes the background color of the "Sign Up" buttons to purple
+let btnClick = document.querySelectorAll('.btn');
+
+let button = (event) => {
+	event.target.style.backgroundColor = "darkviolet";
+}
+
+btnClick.forEach(title => {
+	title.addEventListener('click', button);
+})
+
+// Stops the nav links from running their default action & stops the "click" propogation
+
+navLinks.forEach(link => {
+	link.addEventListener('click', (event) => {
+		event.preventDefault();
+		event.stopPropagation();
+		event.target.style.color = "forestgreen";
+	})
+})
+
+// Right click prevents the context menu from appearing and instead changes the background color of the section
+let noContext = document.querySelector('.inverse-content');
+
+noContext.addEventListener('contextmenu', p => {
+	p.preventDefault();
+	noContext.style.backgroundColor = "hotpink";
+})
+
+// Changes the header background color to coral on window resize
+let headColor = document.querySelector('.main-navigation');
+
+window.addEventListener('resize', () => {
+	headColor.style.background = 'coral';
+})
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
