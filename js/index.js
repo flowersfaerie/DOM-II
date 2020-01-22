@@ -63,10 +63,27 @@ window.addEventListener('resize', () => {
 	headColor.style.background = 'coral';
 })
 	
+// Changes the background color of the Destination Divs on mouse enter and mouse leave	
+let buttonHover = document.querySelectorAll('.content-pick div');
+
+let buttonHoverEnter = (event) => {
+	event.target.style.transform = 'scale(1.1)';
+	event.target.style.transition = 'all 0.2s';
+	event.target.style.background = "bisque";
+}
+
+let buttonHoverLeave = (event) => {
+	event.target.style.transform = 'scale(1)';
+	event.target.style.transform = 'all 0.2s';
+	event.target.style.background = '#ffffff';
+}
+
+buttonHover.forEach(title => {
+	title.addEventListener('mouseenter', buttonHoverEnter);
+	title.addEventListener('mouseleave', buttonHoverLeave);
+})	
 	
-	
-	
-	
+// 	
 	
 	
 	
