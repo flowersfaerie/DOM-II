@@ -83,7 +83,15 @@ buttonHover.forEach(title => {
 	title.addEventListener('mouseleave', buttonHoverLeave);
 })	
 	
-// 	
+// 	Right click prevents the context menu from appearing and instead changes the background color of the div
+let neverContext = document.querySelector('.text-content');
+
+neverContext.addEventListener('contextmenu', div => {
+	div.preventDefault();
+	neverContext.style.color = 'bisque';
+	neverContext.style.background = 'indigo';
+	div.stopPropagation();
+})
 	
 	
 	
